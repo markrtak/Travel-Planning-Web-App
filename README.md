@@ -1,5 +1,11 @@
 # 🌍 Travel Planning Web App
 
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
 A full-stack traveling destination platform built using a **Client-Server architecture**. This application allows users to discover destinations, manage personal "want-to-go" lists, and search through a travel database.
 
 ## 📺 Project Demo
@@ -46,4 +52,8 @@ You can view a full video demonstration of the application's features, including
 
 4.  **Run the application**:
     * Run the command `npm start` or the specific entry file (e.g., `node app.js`).
-    * The website will be hosted on your PC's **local host**
+    * The website will be hosted on your PC's **local host**.
+
+## 🧬 System Architecture
+
+The project follows a modular structure where the **Express** server handles the business logic and database queries. **EJS** serves as the template engine to generate HTML with plain JavaScript, ensuring a smooth flow between the **MongoDB** backend and the user interface.
