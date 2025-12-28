@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("background3.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 1px blue;
+        }
+        .results-container {
+            margin: 30px 50px;
+        }
+        .result-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .result-item a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .result-item a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        .not-found {
+            color: white;
+            font-size: 20px;
+            margin: 30px 50px;
+            background-color: rgba(220, 53, 69, 0.8);
+            padding: 15px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .back-btn {
+            margin: 20px 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+        <a class="navbar-brand" style="color: rgb(191, 255, 161)">Search Results</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form method="POST" action='/search' class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="Search" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    <div class="back-btn">
+        <button onclick="location.href = '/home';" class="btn btn-secondary">Back to Home</button>
+    </div>
+    
+    <div class="results-container">
+        <% if (notfound) { %>
+            <p class="not-found">Destination not found</p>
+        <% } else if (results && results.length > 0) { %>
+            <% results.forEach(function(item) { %>
+                <div class="result-item">
+                    <a href="<%= item.route %>"><%= item.name %></a>
+                </div>
+            <% }); %>
+        <% } %>
+    </div>
+</body>
+</html>
+
