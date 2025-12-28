@@ -5,7 +5,7 @@ A full-stack traveling destination platform built using a **Client-Server archit
 ## 📺 Project Demo
 You can view a full video demonstration of the application's features, including user registration, destination browsing, and the search functionality, via the link below:
 
-* **[Watch the Project Demo on Google Drive]([YOUR_GOOGLE_DRIVE_LINK_HERE](https://drive.google.com/file/d/1KEiYN4J-r26McaHE81LTIddZWYnisQQT/view?usp=sharing))**
+* **[Watch the Full Project Demo](https://drive.google.com/file/d/1KEiYN4J-r26McaHE81LTIddZWYnisQQT/view?usp=sharing)**
 
 ## 🚀 Features
 
